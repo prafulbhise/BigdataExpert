@@ -1,0 +1,30 @@
+1. Download zeppelin binaries (zeppelin-0.7.3-bin-all.tgz) from https://zeppelin.apache.org/download.html
+2. Upload the file to edge node in home direcotry
+3. use tar to unzip the file (tar -xzvf)
+4. cd to conf folder
+5. copy zeppelin-env.sh.template to zeppelin-env.sh
+6. Give the spark home and hadoop direcotry
+export SPARK_HOME=/home/praful/spark-2.1.1-bin-hadoop2.7
+export HADOOP_CONF_DIR=/etc/hadoop/conf
+7. Specify yarn as the master for job scheduling
+export MASTER=yarn-client
+8. Copy hive-site.xml from /etc/hive/conf into conf folder
+9. Because azure dev is in cloud and ports are not open you need to use ssh tunnel.
+10. In zeppelin-site.xml edit property. Give a port like 9097.
+<property>
+  <name>zeppelin.server.port</name>
+  <value>9097</value>
+  <description>Server port.</description>
+</property>
+11. cd into bin folder
+12. To start zeppelin service type in ./zeppelin-daemon.sh start. You will see 
+Zeppelin start                                             [  OK  ]
+13. Using telnet open a tunnel. For this in your telnt session go to change settings
+14. Under connections/SSH/tunnels
+    Edit Source port as the port you gave in zeppelin-site.xml
+    In destinaton give value as localhost:port-number
+    Clck Add and then Apply
+15. Now you go to localhost:port-number you should see the zeppelin page
+16. by default there is no login. But you can set up login in if you like in sitexml.
+17. Happy coding
+1. To start a notebook
