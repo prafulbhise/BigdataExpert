@@ -1,5 +1,5 @@
 #!/bin/bash
-#Created By: Praful Kumar Bhise<PKB017@MAERSK.COM>
+#Created By: Praful Kumar Bhise<praful.bigdata@gmail.com>
 #use today's date and time
 #######################################################################################################
 day=$(date +%Y%m%d%H%M%S)
