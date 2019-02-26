@@ -69,6 +69,6 @@ sh -x /home/aa-crbprdadldl1/datalake_scripts/inttra/bin/sqoop_ingestion_inttra.s
                 exit 0
         else
                 echo "ERROR:$(date -d "today" +"%Y:%m:%d:%H:%M"): Port Codes table has not updated, Please check for the root cause"
-                echo "Failed to update Port Codes table, Please check" | mailx -s "Inttra Failure Alert: Failed to update Port Codes table" -r "pkb017@maersk.com" "pkb017@maersk.com,BIDataOperationsSupport@maersk.com"
+                echo "Failed to update Port Codes table, Please check" | mailx -s "Inttra Failure Alert: Failed to update Port Codes table" -r "praful.bigdata@gmail.com" "praful.bigdata@gmail.com"
                 exit 1
                 fi
